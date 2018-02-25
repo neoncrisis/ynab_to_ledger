@@ -63,7 +63,6 @@ end
 
 def main
   filepath = ARGV.first
-  outputpath = "ledger.dat"
 
   # Read entries from file
   entries = CSV.read(filepath, headers: true, encoding: "BOM|UTF-8").map do |row|
@@ -83,9 +82,7 @@ def main
 
   # Write transactions to file
   # TODO: smarter sorting, currently assumes reverse order
-  File.open(outputpath, "w") do |file|
-    file.puts transactions.compact.reverse.join("\n")
-  end
+  puts transactions.compact.reverse.join("\n")
 end
 
 main if __FILE__ == $0
