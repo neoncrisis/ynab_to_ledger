@@ -10,9 +10,11 @@ First, export your data from YNAB:
 * Download and unzip the archive
 
 Next, run `ynab_to_ledger.rb` to output the converted filet to stdout:
+
 `$ ruby ynab_to_ledger.rb My\ Budget\ as\ of\ 2016-10-02\ 1007\ PM\ -\ Register.csv`
 
 You can write to a file using standard shell syntax:
+
 `$ ruby ynab_to_ledger.rb My\ Budget\ as\ of\ 2016-10-02\ 1007\ PM\ -\ Register.csv > ledger.dat`
 
 ## TODO
